@@ -83,7 +83,6 @@ namespace Microsoft.AspNetCore.Mvc.ViewFeatures.Internal
             {
                 viewData.TemplateInfo.HtmlFieldPrefix = string.Empty;
 
-                var fieldNameBase = oldPrefix;
                 var result = new HtmlContentBuilder();
                 var viewEngine = serviceProvider.GetRequiredService<ICompositeViewEngine>();
                 var viewBufferScope = serviceProvider.GetRequiredService<IViewBufferScope>();
@@ -102,7 +101,7 @@ namespace Microsoft.AspNetCore.Mvc.ViewFeatures.Internal
                         container: htmlHelper.ViewData.ModelExplorer,
                         metadata: itemMetadata,
                         model: item);
-                    var fieldName = string.Format(CultureInfo.InvariantCulture, "{0}[{1}]", fieldNameBase, index++);
+                    var fieldName = string.Format(CultureInfo.InvariantCulture, "{0}[{1}]", oldPrefix, index++);
 
                     var templateBuilder = new TemplateBuilder(
                         viewEngine,
