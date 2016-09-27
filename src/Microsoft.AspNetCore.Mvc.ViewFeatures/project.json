@@ -35,6 +35,10 @@
       "version": "1.1.0-*",
       "type": "build"
     },
+    "Microsoft.Extensions.HashCodeCombiner.Sources": {
+      "version": "1.1.0-*",
+      "type": "build"
+    },
     "Microsoft.Extensions.PropertyActivator.Sources": {
       "version": "1.1.0-*",
       "type": "build"
@@ -43,19 +47,15 @@
       "version": "1.1.0-*",
       "type": "build"
     },
-    "Microsoft.Extensions.HashCodeCombiner.Sources": {
-      "version": "1.1.0-*",
-      "type": "build"
-    },
     "Microsoft.Extensions.WebEncoders": "1.1.0-*",
-    "Newtonsoft.Json": "9.0.1",
-    "System.Buffers": "4.0.0-*"
+    "NETStandard.Library": "1.6.1-*",
+    "Newtonsoft.Json": "9.0.1"
   },
   "frameworks": {
     "net451": {},
     "netstandard1.6": {
       "dependencies": {
-        "System.Runtime.Serialization.Primitives": "4.1.1-*"
+        "System.Runtime.Serialization.Primitives": "4.3.0-*"
       }
     }
   }
